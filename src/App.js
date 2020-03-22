@@ -31,14 +31,13 @@ class App extends React.Component {
           setCurrentUser({
               id:snapShot.id,
               ...snapShot.data()
-          },() => console.log(this.state)
+          }
          )
         })   
       }
       // when user sign out, set the current user to null.
       else {
         setCurrentUser(userAuth)
-        console.log(this.state)
       }
     })
   }
