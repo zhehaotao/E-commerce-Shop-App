@@ -19,7 +19,7 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const {setCurrentUser} = this.props
+    const { setCurrentUser } = this.props
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       // when user sign in
@@ -37,7 +37,7 @@ class App extends React.Component {
       }
       // when user sign out, set the current user to null.
       else {
-        setCurrentUser(userAuth)
+        setCurrentUser(userAuth);
       }
     })
   }
@@ -62,7 +62,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser:selectCurrentUser
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({
